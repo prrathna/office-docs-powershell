@@ -593,6 +593,12 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - [Certificate based authentication](app-only-auth-powershell-v2.md) for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
   - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
   - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
+- The following Microsoft 365 Group management cmdlets now work in Exchange Online PowerShell with [app-only authentication](app-only-auth-powershell-v2.md):
+  - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
+  - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
+  - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
+  - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
+  - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 - Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet will run to completion.
 - The format of the error returned from failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
 
@@ -610,15 +616,10 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 2.0.4
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the Exchange Online PowerShell module](#prerequisites-for-the-exchange-online-powershell-module) section in this article.
-
 - The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 log in experiences](connect-to-exchange-online-powershell.md#powershell-7-log-in-experiences).
-
 - The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
-
 - Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) has been enabled in the module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
-
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
-
 - The interactive sign-in process now uses a more secure method to fetch access tokens using safe reply URLs.
 
 #### Version 2.0.3
